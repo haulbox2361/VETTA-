@@ -112,7 +112,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#0B1221] text-white">
+      <section className="py-20 bg-brand-blue text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to get started?</h2>
@@ -120,7 +120,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Let's discuss how our {service.title.toLowerCase()} services can accelerate your business.
             </p>
             <Link href="/contact">
-              <Button className="bg-white text-[#0B1221] hover:bg-neutral-100 hover:text-[#0B1221] focus-visible:ring-white">
+              <Button className="bg-white text-brand-blue hover:bg-neutral-100 hover:text-brand-blue focus-visible:ring-white">
                 Contact Us Today
               </Button>
             </Link>
