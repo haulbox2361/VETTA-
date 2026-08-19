@@ -25,7 +25,7 @@ export default function ResearchPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchArticles.map((article, index) => (
               <Reveal key={article.id} delay={index * 150}>
-                <Link href={`/research/${article.slug}`} className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-xl">
+                <Link href={`/research/${article.slug}`} className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-xl relative z-20">
                   <Card className="flex flex-col h-full border-neutral-200 hover:border-brand-blue/30 transition-all p-8 shadow-sm hover:shadow-md">
                     <div className="mb-4 flex items-center justify-between">
                       <span className="text-xs font-bold uppercase tracking-wider text-brand-blue bg-brand-blue/10 px-2 py-1 rounded-sm">
