@@ -4,16 +4,14 @@ import { Container } from './Container';
 import { Navigation } from './Navigation';
 import { MobileMenu } from './MobileMenu';
 import { Button } from './Button';
+import { Logo } from './Logo';
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/90 backdrop-blur-md">
       <Container className="flex h-[60px] md:h-[80px] items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md p-1 -ml-1">
-          {/* Logo placeholder - replace with actual logo.svg */}
-          <span className="text-2xl font-bold text-brand-black tracking-tight flex items-center">
-            <span className="text-brand-blue mr-1">/</span>VETTA
-          </span>
+        <Link href="/" className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md p-1 -ml-1 hover:opacity-90 transition-opacity">
+          <Logo className="scale-90" />
         </Link>
         
         <Navigation />

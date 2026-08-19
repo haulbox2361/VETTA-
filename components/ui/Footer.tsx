@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Container } from './Container';
+import { Logo } from './Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,10 +12,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:gap-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-4 md:col-span-1">
-            <Link href="/" className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md">
-              <span className="text-2xl font-bold text-brand-black tracking-tight flex items-center">
-                <span className="text-brand-blue mr-1">/</span>VETTA
-              </span>
+            <Link href="/" className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md hover:opacity-90 transition-opacity">
+              <Logo className="scale-90 origin-left" />
             </Link>
             <p className="text-sm text-neutral-500">
               Simple Outside. Intelligent Inside. Professional technology consulting for forward-thinking companies.
