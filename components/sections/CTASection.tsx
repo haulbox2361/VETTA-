@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function CTASection() {
   return (
-    <Section className="bg-brand-blue py-24 relative overflow-hidden">
+    <Section className="bg-brand-blue py-24 relative z-20 overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
       

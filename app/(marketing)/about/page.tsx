@@ -90,7 +90,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white relative z-20">
         <Container>
           <div className="max-w-4xl mx-auto bg-brand-blue rounded-3xl p-12 md:p-16 text-center shadow-2xl relative overflow-hidden">
             {/* Background pattern */}

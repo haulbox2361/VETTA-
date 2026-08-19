@@ -134,7 +134,7 @@ export function InteractiveBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-50 opacity-100 mix-blend-multiply"
+      className="fixed inset-0 pointer-events-none z-10 opacity-100 mix-blend-multiply"
     />
   );
 }
