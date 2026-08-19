@@ -64,21 +64,21 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+            <div className="bg-white relative z-20 p-8 rounded-xl border border-neutral-200 shadow-sm">
               <div className="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center font-bold text-xl mb-6">1</div>
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Radical Candor</h3>
               <p className="text-neutral-600">
                 We don't sell vaporware. If a technology isn't ready for your use case, or if off-the-shelf software would serve you better, we will tell you immediately.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+            <div className="bg-white relative z-20 p-8 rounded-xl border border-neutral-200 shadow-sm">
               <div className="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center font-bold text-xl mb-6">2</div>
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Architect for Scale</h3>
               <p className="text-neutral-600">
                 We refuse to build technical debt. Every system is designed with a clear upgrade path, robust security, and the ability to scale horizontally.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+            <div className="bg-white relative z-20 p-8 rounded-xl border border-neutral-200 shadow-sm">
               <div className="w-12 h-12 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center font-bold text-xl mb-6">3</div>
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Simplicity Wins</h3>
               <p className="text-neutral-600">

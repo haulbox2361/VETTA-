@@ -64,7 +64,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {service.capabilities.map((cap, i) => (
-              <div key={i} className="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm flex items-start gap-4">
+              <div key={i} className="bg-white relative z-20 p-6 rounded-lg border border-neutral-200 shadow-sm flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue shrink-0">
                   <span className="font-semibold text-sm">{i + 1}</span>
                 </div>
@@ -100,7 +100,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <h2 className="text-h2 mb-8">Common Use Cases</h2>
               <div className="space-y-6">
                 {service.useCases.map((useCase, i) => (
-                  <div key={i} className="p-6 border border-neutral-200 rounded-xl">
+                  <div key={i} className="bg-white relative z-20 p-6 border border-neutral-200 rounded-xl">
                     <h3 className="text-lg font-bold text-neutral-900 mb-2">{useCase.title}</h3>
                     <p className="text-neutral-600">{useCase.description}</p>
                   </div>
