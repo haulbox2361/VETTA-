@@ -14,7 +14,7 @@ export default function CTASection() {
         <h2 className="text-h1 text-white mb-6 max-w-3xl">
           Ready to transform your technical operations?
         </h2>
-        <p className="text-lg text-blue-100 mb-10 max-w-2xl">
+        <p className="text-lg text-white/80 mb-10 max-w-2xl">
           Contact our team today to discuss your challenges. We'll provide a clear assessment of how intelligent engineering can drive your business forward.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

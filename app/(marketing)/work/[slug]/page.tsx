@@ -58,7 +58,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             {project.results.map((result, i) => (
               <div key={i} className="text-center md:text-left">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{result.metric}</div>
-                <div className="text-brand-blue-light font-medium">{result.description}</div>
+                <div className="text-white/80 font-medium">{result.description}</div>
               </div>
             ))}
           </div>

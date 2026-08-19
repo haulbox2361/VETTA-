@@ -98,7 +98,7 @@ export default function AboutPage() {
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to work with VETTA?</h2>
-              <p className="text-brand-blue-light text-xl mb-10 max-w-2xl mx-auto">
+              <p className="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
                 Let's discuss how our engineering team can help solve your most complex operational challenges.
               </p>
               <Link href="/contact">
