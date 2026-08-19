@@ -79,8 +79,12 @@
     font-family: var(--font-sans);
     font-size: 15px;
     line-height: 1.6;
-    color: var(--color-neutral-700);
-    background-color: #ffffff;
+    color: #475569; /* Slate 600 Body */
+    background-color: #F8FAFC; /* Slate 50 Bg */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0F172A; /* Slate 900 */
   }
 
   a {

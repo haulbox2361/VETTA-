@@ -26,17 +26,17 @@ export default function ServicesPage() {
               <Link 
                 key={service.id} 
                 href={`/services/${service.slug}`}
-                className="group flex flex-col h-full bg-white border border-neutral-200 rounded-xl p-8 transition-all hover:border-brand-blue hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+                className="group flex flex-col h-full bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 shadow-sm hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
               >
                 <div className="flex-1">
-                  <h2 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-brand-blue transition-colors">
+                  <h2 className="text-2xl font-extrabold text-[#0F172A] mb-3 group-hover:text-brand-blue transition-colors tracking-tight">
                     {service.title}
                   </h2>
-                  <p className="text-neutral-600 mb-6">
+                  <p className="text-slate-600 mb-6 leading-relaxed">
                     {service.shortDescription}
                   </p>
                 </div>
-                <div className="pt-6 border-t border-neutral-100 flex items-center text-sm font-medium text-brand-blue">
+                <div className="pt-6 border-t border-slate-100 flex items-center text-sm font-semibold tracking-wide text-brand-blue">
                   Learn more
                   <ArrowRight size={16} className="ml-2 transform transition-transform group-hover:translate-x-1" />
                 </div>
