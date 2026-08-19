@@ -36,7 +36,7 @@ export function InteractiveBackground() {
         this.y = y;
         this.baseX = x;
         this.baseY = y;
-        this.size = Math.random() * 4 + 2.0; // Increased size slightly more
+        this.size = Math.random() * 1.5 + 0.5; // Made small like dots
         this.density = (Math.random() * 20) + 1;
       }
 
@@ -89,8 +89,8 @@ export function InteractiveBackground() {
 
     const initParticles = () => {
       particles = [];
-      // Increased density 5x more as requested (very high density)
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 1000); 
+      // Increased density 5x more (huge amount of particles)
+      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 200); 
       for (let i = 0; i < numberOfParticles; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
