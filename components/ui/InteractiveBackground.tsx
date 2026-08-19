@@ -36,13 +36,13 @@ export function InteractiveBackground() {
         this.y = y;
         this.baseX = x;
         this.baseY = y;
-        this.size = Math.random() * 3 + 1.5; // Increased size 2x
+        this.size = Math.random() * 4 + 2.0; // Increased size slightly more
         this.density = (Math.random() * 20) + 1;
       }
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = 'rgba(30, 58, 138, 0.4)'; // Increased opacity 2x
+        ctx.fillStyle = 'rgba(30, 58, 138, 0.7)'; // High opacity for deep blue
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
@@ -89,8 +89,8 @@ export function InteractiveBackground() {
 
     const initParticles = () => {
       particles = [];
-      // Increased density ~2.5x
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 5000); 
+      // Increased density 5x more as requested (very high density)
+      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 1000); 
       for (let i = 0; i < numberOfParticles; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
