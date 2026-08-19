@@ -78,9 +78,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </div>
 
             {/* The Objective */}
-            <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">The Objective</h2>
-              <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm border-l-4 border-l-brand-blue">
+            <div className="lg:col-span-1">
+              <div className="bg-white relative z-20 p-8 rounded-xl border border-neutral-200 shadow-sm border-l-4 border-l-brand-blue">
+                <h3 className="text-xl font-bold text-neutral-900 mb-6">Project Impact</h3>
                 <p className="text-lg text-neutral-800 font-medium italic">
                   "{project.objective}"
                 </p>
@@ -106,9 +106,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             {/* Tech Stack */}
             <div>
               <h2 className="text-2xl font-bold text-neutral-900 mb-6">Technology Stack</h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="px-4 py-2 bg-white border border-neutral-200 text-neutral-700 rounded-full text-sm font-medium shadow-sm">
+                  <span key={i} className="px-4 py-2 bg-white relative z-20 border border-neutral-200 text-neutral-700 rounded-full text-sm font-medium shadow-sm">
                     {tech}
                   </span>
                 ))}

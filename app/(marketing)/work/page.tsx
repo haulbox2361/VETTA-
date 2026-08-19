@@ -26,7 +26,7 @@ export default function WorkPage() {
               <Link 
                 key={project.id} 
                 href={`/work/${project.slug}`}
-                className="group flex flex-col h-full overflow-hidden rounded-xl border border-neutral-200 transition-all hover:border-brand-blue hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+                className="group flex flex-col h-full overflow-hidden rounded-xl border border-neutral-200 transition-all hover:border-brand-blue hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue relative z-20"
               >
                 <div className="bg-neutral-100 aspect-video flex items-center justify-center p-8 text-center text-neutral-400 border-b border-neutral-200">
                   {/* Placeholder for real images */}
