@@ -92,7 +92,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <Container>
-          <div className="max-w-4xl mx-auto bg-brand-blue rounded-3xl p-12 md:p-16 text-center shadow-2xl relative overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-[#0B1221] rounded-3xl p-12 md:p-16 text-center shadow-2xl relative overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px]"></div>
             
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 Let's discuss how our engineering team can help solve your most complex operational challenges.
               </p>
               <Link href="/contact">
-                <Button className="bg-white text-brand-blue hover:bg-neutral-100 hover:text-brand-blue text-lg px-8 py-6 h-auto">
+                <Button className="bg-white text-[#0B1221] hover:bg-neutral-100 hover:text-[#0B1221] text-lg px-8 py-6 h-auto">
                   Start Your Project
                 </Button>
               </Link>

@@ -24,12 +24,12 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white/50">Services</h3>
             <ul className="flex flex-col gap-3 text-sm text-slate-300">
-              <li><Link href="/services/ai-automation" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">AI & Automation</Link></li>
-              <li><Link href="/services/data-analytics" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Data Analysis & Intelligence</Link></li>
-              <li><Link href="/services/software-development" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Software Development</Link></li>
-              <li><Link href="/services/web-development" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Web Development</Link></li>
-              <li><Link href="/services/research-intelligence" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Research & Intelligence</Link></li>
-              <li><Link href="/services/technology-consulting" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Technology Consulting</Link></li>
+              <li><Link href="/services/ai-automation" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">AI & Automation</Link></li>
+              <li><Link href="/services/data-analytics" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Data Analysis & Intelligence</Link></li>
+              <li><Link href="/services/software-development" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Software Development</Link></li>
+              <li><Link href="/services/web-development" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Web Development</Link></li>
+              <li><Link href="/services/research-intelligence" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Research & Intelligence</Link></li>
+              <li><Link href="/services/technology-consulting" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Technology Consulting</Link></li>
             </ul>
           </div>
           
@@ -37,10 +37,10 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white/50">Company</h3>
             <ul className="flex flex-col gap-3 text-sm text-slate-300">
-              <li><Link href="/work" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Work</Link></li>
-              <li><Link href="/research" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Research</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">About</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Contact</Link></li>
+              <li><Link href="/work" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Work</Link></li>
+              <li><Link href="/research" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Research</Link></li>
+              <li><Link href="/about" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">About</Link></li>
+              <li><Link href="/contact" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Contact</Link></li>
             </ul>
           </div>
           
@@ -48,8 +48,8 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white/50">Legal</h3>
             <ul className="flex flex-col gap-3 text-sm text-slate-300">
-              <li><Link href="/privacy" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
