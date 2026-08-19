@@ -41,11 +41,13 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased min-h-screen flex flex-col">
         <InteractiveBackground />
-        <Header />
-        <main className="flex-1 relative z-10">
+        <div className="relative z-20">
+          <Header />
+        </div>
+        <main className="flex-1">
           {children}
         </main>
-        <div className="relative z-10">
+        <div className="relative z-20">
           <Footer />
         </div>
       </body>
