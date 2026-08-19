@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
-import { InteractiveBackground } from '@/components/ui/InteractiveBackground'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased min-h-screen flex flex-col">
-        <InteractiveBackground />
         <div className="relative z-20">
           <Header />
         </div>
