@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Logo({ className = '' }: { className?: string }) {
+export function Logo({ className = '', inverted = false }: { className?: string, inverted?: boolean }) {
   return (
     <div className={`flex items-center ${className}`}>
       <svg 
@@ -9,7 +9,7 @@ export function Logo({ className = '' }: { className?: string }) {
         viewBox="0 0 32 32" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg" 
-        className="text-brand-blue flex-shrink-0"
+        className={`${inverted ? 'text-white' : 'text-brand-blue'} flex-shrink-0`}
       >
         {/* The Dot */}
         <circle cx="8" cy="12" r="4.5" fill="currentColor" />
@@ -22,7 +22,7 @@ export function Logo({ className = '' }: { className?: string }) {
           strokeLinecap="round" 
         />
       </svg>
-      <span className="text-3xl font-extrabold tracking-widest text-brand-black ml-1 uppercase">
+      <span className={`text-3xl font-extrabold tracking-widest ml-1 uppercase ${inverted ? 'text-white' : 'text-brand-black'}`}>
         VETTA
       </span>
     </div>
