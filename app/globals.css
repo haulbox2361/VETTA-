@@ -2,8 +2,8 @@
 
 @theme {
   /* Brand Colors */
-  --color-brand-blue: #2563EB;
-  --color-brand-blue-hover: #1D4ED8;
+  --color-brand-blue: #1E3A8A; /* Tailwind blue-900 (Navy) */
+  --color-brand-blue-hover: #172554; /* Tailwind blue-950 (Deep Navy) */
   --color-brand-black: #0F172A;
   
   /* Neutral Colors */

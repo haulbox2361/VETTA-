@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col gap-4 md:col-span-1">
             <Link href="/" className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-md hover:opacity-90 transition-opacity">
-              <Logo className="scale-90 origin-left" />
+              <Logo className="origin-left" />
             </Link>
             <p className="text-sm text-neutral-500">
               Simple Outside. Intelligent Inside. Professional technology consulting for forward-thinking companies.

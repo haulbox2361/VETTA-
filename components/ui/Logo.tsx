@@ -4,8 +4,8 @@ export function Logo({ className = '' }: { className?: string }) {
   return (
     <div className={`flex items-center ${className}`}>
       <svg 
-        width="28" 
-        height="28" 
+        width="38" 
+        height="38" 
         viewBox="0 0 32 32" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg" 
@@ -22,7 +22,7 @@ export function Logo({ className = '' }: { className?: string }) {
           strokeLinecap="round" 
         />
       </svg>
-      <span className="text-xl font-extrabold tracking-widest text-brand-black ml-1 uppercase">
+      <span className="text-3xl font-extrabold tracking-widest text-brand-black ml-1 uppercase">
         VETTA
       </span>
     </div>
