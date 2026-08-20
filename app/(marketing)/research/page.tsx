@@ -20,7 +20,7 @@ export default function ResearchPage() {
         tagline="Intelligence"
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchArticles.map((article, index) => (

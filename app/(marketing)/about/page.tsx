@@ -19,10 +19,10 @@ export default function AboutPage() {
         tagline="Our Story"
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 bg-white relative z-20 p-8 md:p-10 rounded-2xl border border-neutral-200 shadow-sm">
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
                 Engineering for Impact
               </h2>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/5] bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 relative">
+              <div className="aspect-[4/5] bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 relative z-20 shadow-md">
                 <ImageCarousel 
                   images={[
                     '/images/about/about-1.jpg',
@@ -62,7 +62,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">Our Philosophy</h2>

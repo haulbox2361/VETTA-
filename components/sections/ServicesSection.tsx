@@ -47,7 +47,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <Section className="bg-neutral-50">
+    <Section>
       <Container>
         <Reveal className="mb-12 md:mb-16 text-center max-w-2xl mx-auto">
           <h2 className="text-h2 text-brand-black mb-4">Our Services</h2>

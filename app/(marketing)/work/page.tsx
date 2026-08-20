@@ -19,14 +19,14 @@ export default function WorkPage() {
         tagline="Portfolio"
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {projects.map((project) => (
               <Link 
                 key={project.id} 
                 href={`/work/${project.slug}`}
-                className="group flex flex-col h-full overflow-hidden rounded-xl border border-neutral-200 transition-all hover:border-brand-blue hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue relative z-20"
+                className="group flex flex-col h-full overflow-hidden rounded-2xl border border-neutral-200 bg-white relative z-20 shadow-sm transition-all hover:border-brand-blue/30 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
               >
                 <div className="bg-neutral-100 aspect-video flex items-center justify-center p-8 text-center text-neutral-400 border-b border-neutral-200">
                   {/* Placeholder for real images */}

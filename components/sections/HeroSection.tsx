@@ -17,7 +17,7 @@ const heroImages = [
 
 export default function HeroSection() {
   return (
-    <Section className="bg-neutral-50 pb-20 pt-24 md:pt-32 lg:pt-36 overflow-hidden">
+    <Section className="pb-20 pt-24 md:pt-32 lg:pt-36 overflow-hidden">
       <Container className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
         {/* Left: Text Content */}

@@ -18,12 +18,12 @@ export default function ContactPage() {
         tagline="Contact Us"
       />
 
-      <section className="py-16 md:py-24 bg-white relative">
+      <section className="py-16 md:py-24 relative">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
             
             {/* Left Col: Contact Info */}
-            <div className="lg:col-span-4 lg:pr-8">
+            <div className="lg:col-span-4 lg:pr-8 bg-white relative z-20 p-8 rounded-2xl border border-neutral-200 shadow-sm">
               <h2 className="text-2xl font-bold text-neutral-900 mb-8">Let's discuss your project</h2>
               
               <div className="space-y-8">
