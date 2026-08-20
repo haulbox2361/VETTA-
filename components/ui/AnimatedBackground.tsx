@@ -22,7 +22,7 @@ export function AnimatedBackground() {
     if (!ctx) return;
 
     let particlesArray: Particle[] = [];
-    const numberOfParticles = 375;
+    const numberOfParticles = 45;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -64,15 +64,15 @@ export function AnimatedBackground() {
         this.y = Math.random() * canvas.height;
         this.baseX = this.x;
         this.baseY = this.y;
-        this.size = Math.random() * 2 + 1;
-        this.density = (Math.random() * 20) + 1;
+        this.size = Math.random() * 0.8 + 0.6; // Thin, subtle micro-dots
+        this.density = (Math.random() * 15) + 1;
         this.angle = Math.random() * Math.PI * 2;
-        this.velocity = Math.random() * 0.015 + 0.005;
+        this.velocity = Math.random() * 0.012 + 0.004;
       }
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = '#1E3A8A4D'; // Dark blue, 30% opacity
+        ctx.fillStyle = 'rgba(30, 58, 138, 0.22)'; // Soft, thin, non-distracting blue
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
