@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '@/components/ui/Container';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Button } from '@/components/ui/Button';
+import { ImageCarousel } from '@/components/ui/ImageCarousel';
 import Link from 'next/link';
 
 export const metadata = {
@@ -39,11 +40,16 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/5] bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 flex items-center justify-center p-8">
-                <div className="text-center text-neutral-400">
-                  <span className="text-sm font-medium uppercase tracking-wider block mb-2">Team Office Placeholder</span>
-                  (Demonstration Image)
-                </div>
+              <div className="aspect-[4/5] bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200 relative">
+                <ImageCarousel 
+                  images={[
+                    '/images/about/about-1.jpg',
+                    '/images/about/about-2.jpg',
+                    '/images/about/about-3.jpg',
+                    '/images/about/about-4.jpg',
+                    '/images/about/about-5.jpg'
+                  ]} 
+                />
               </div>
               
               {/* Decorative elements */}
