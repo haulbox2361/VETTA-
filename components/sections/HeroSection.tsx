@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function HeroSection() {
   return (
-    <Section className="bg-transparent pb-20 pt-24 md:pt-32 lg:pt-40">
+    <Section className="bg-neutral-50 pb-20 pt-24 md:pt-32 lg:pt-40">
       <Container className="flex flex-col items-center text-center">
         <h1 className="text-display max-w-4xl text-brand-black mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '100ms' }}>
           Intelligent Engineering for Forward-Thinking Companies

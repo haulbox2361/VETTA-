@@ -8,7 +8,7 @@ export default function CTASection() {
   return (
     <Section className="bg-brand-blue py-24 relative z-20 overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-transparent opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
       
       <Container className="relative z-10 flex flex-col items-center text-center">
         <h2 className="text-h1 text-white mb-6 max-w-3xl">
@@ -19,7 +19,7 @@ export default function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <Link href="/contact">
-            <Button className="w-full sm:w-auto bg-transparent text-brand-blue hover:bg-neutral-100 hover:text-brand-blue focus-visible:ring-white">
+            <Button className="w-full sm:w-auto bg-white text-brand-blue hover:bg-neutral-100 hover:text-brand-blue focus-visible:ring-white">
               Start a Project
             </Button>
           </Link>
