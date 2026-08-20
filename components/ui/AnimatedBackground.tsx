@@ -72,7 +72,7 @@ export function AnimatedBackground() {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = 'rgba(30, 58, 138, 0.22)'; // Soft, thin, non-distracting blue
+        ctx.fillStyle = '#1E3A8A'; // Dark blue
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
