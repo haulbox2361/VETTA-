@@ -22,7 +22,7 @@ export function AnimatedBackground() {
     if (!ctx) return;
 
     let particlesArray: Particle[] = [];
-    const numberOfParticles = 75;
+    const numberOfParticles = 375;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
