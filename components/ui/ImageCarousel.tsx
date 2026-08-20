@@ -8,7 +8,7 @@ interface ImageCarouselProps {
   interval?: number;
 }
 
-export function ImageCarousel({ images, interval = 500 }: ImageCarouselProps) {
+export function ImageCarousel({ images, interval = 2000 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export function ImageCarousel({ images, interval = 500 }: ImageCarouselProps) {
       {images.map((src, index) => (
         <div
           key={src}
-          className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         >
