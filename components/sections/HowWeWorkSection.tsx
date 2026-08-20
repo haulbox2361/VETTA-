@@ -43,7 +43,7 @@ export default function HowWeWorkSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
           {/* Connector line for desktop */}
-          <div className="hidden md:block absolute top-6 left-0 right-0 h-[1px] bg-neutral-800 -z-0"></div>
+          <div className="hidden md:block absolute top-6 left-0 right-0 h-[1px] bg-brand-blue/40 -z-0"></div>
           
           {steps.map((step, index) => (
             <div key={index} className="relative z-10 flex flex-col">

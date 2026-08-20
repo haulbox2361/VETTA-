@@ -23,6 +23,11 @@ export default function CTASection() {
               Start a Project
             </Button>
           </Link>
+          <Link href="/work">
+            <Button variant="secondary" className="w-full sm:w-auto border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60">
+              Explore Our Work →
+            </Button>
+          </Link>
         </div>
       </Container>
     </Section>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @theme {
   /* Brand Colors */
@@ -20,7 +21,7 @@
   --color-info: #3B82F6;
 
   /* Typography */
-  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --text-display: 48px;
   --text-display--line-height: 1.2;
   --text-display--font-weight: 700;
