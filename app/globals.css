@@ -103,12 +103,12 @@
     font-family: var(--font-sans);
     font-size: 15px;
     line-height: 1.6;
-    color: #CBD5E1; /* Slate 300 — body text on dark bg */
-    background-color: #0F172A; /* brand-black dark */
+    color: #475569; /* Slate 600 Body */
+    background-color: #F8FAFC; /* Slate 50 Bg */
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #F1F5F9; /* Slate 100 — headings on dark bg */
+    color: #0F172A; /* Slate 900 */
   }
 
   a {

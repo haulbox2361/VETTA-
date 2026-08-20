@@ -27,8 +27,8 @@ export function Navigation() {
             className={cn(
               'flex items-center gap-1.5 px-4 py-2 rounded-lg text-[14px] font-semibold transition-all duration-200',
               active
-                ? 'text-white bg-white/10'
-                : 'text-white/70 hover:text-white hover:bg-white/8'
+                ? 'text-brand-blue bg-brand-blue/8'
+                : 'text-neutral-700 hover:text-brand-blue hover:bg-neutral-100'
             )}
           >
             <Icon
