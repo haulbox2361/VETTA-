@@ -54,7 +54,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       {/* Metrics / Results Bar */}
       <section className="pb-16 bg-white">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-12 bg-gradient-to-br from-[#0B132B] via-[#0F172A] to-[#1E293B] border border-white/10 text-white rounded-2xl shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-12 bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] border border-white/15 text-white rounded-2xl shadow-xl">
             {project.results.map((result, i) => (
               <div key={i} className="text-center md:text-left">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{result.metric}</div>

@@ -32,7 +32,7 @@ const steps = [
 
 export default function HowWeWorkSection() {
   return (
-    <Section className="bg-brand-black text-white py-20">
+    <Section className="bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] text-white py-20 border-t border-white/10">
       <Container>
         <div className="mb-16 md:text-center max-w-2xl md:mx-auto">
           <h2 className="text-h2 mb-4 text-white">How We Work</h2>

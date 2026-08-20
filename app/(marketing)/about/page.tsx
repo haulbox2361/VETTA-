@@ -100,7 +100,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-24 bg-white relative z-20">
         <Container>
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#0B132B] via-[#0F172A] to-[#1E293B] border border-white/10 rounded-3xl p-12 md:p-16 text-center shadow-2xl relative overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] border border-white/15 rounded-3xl p-12 md:p-16 text-center shadow-2xl relative overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px]"></div>
             

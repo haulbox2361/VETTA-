@@ -112,7 +112,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0B132B] via-[#0F172A] to-[#1E293B] border-t border-white/10 text-white relative z-20">
+      <section className="py-20 bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] border-t border-white/15 text-white relative z-20">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to get started?</h2>

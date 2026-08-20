@@ -74,7 +74,7 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
   const displayText = tagline || title || 'VETTA';
 
   return (
-    <div className="relative bg-brand-black py-20 md:py-28 border-b border-white/10 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] py-20 md:py-28 border-b border-white/15 overflow-hidden">
 
       {/* Slowly cycling background images — ultra subtle */}
       {mounted && bgImages.map((src, i) => (
@@ -89,7 +89,7 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
 
       {/* Gradient overlay for readability */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black/90 to-brand-blue/50"
+        className="absolute inset-0 bg-gradient-to-br from-[#111F3C]/95 via-[#162C58]/90 to-[#1E3A8A]/70"
         style={{ zIndex: 1 }}
       />
 
