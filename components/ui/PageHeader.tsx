@@ -109,30 +109,26 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
           {/* Spinning Icon */}
           <div
             style={{
-              animation: 'spin3d 6s linear infinite',
-              filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.7)) drop-shadow(0 0 6px rgba(99,160,255,0.9))',
+              animation: 'spin3d 10s linear infinite',
             }}
           >
             <IconComponent
               size={240}
-              strokeWidth={1.2}
+              strokeWidth={2}
               className="text-white"
-              style={{ opacity: 0.75 }}
+              style={{ opacity: 0.90 }}
             />
           </div>
           {/* Spinning Name Text */}
           <div
             style={{
-              animation: 'spin3d 6s linear infinite',
-              animationDelay: '0.1s',
+              animation: 'spin3d 10s linear infinite',
+              animationDelay: '0s',
             }}
           >
             <span
-              className="text-white font-extrabold tracking-[0.2em] uppercase text-lg"
-              style={{
-                opacity: 0.80,
-                textShadow: '0 0 20px rgba(255,255,255,0.8), 0 0 6px rgba(99,160,255,1)',
-              }}
+              className="text-white font-extrabold tracking-[0.25em] uppercase text-xl"
+              style={{ opacity: 0.90 }}
             >
               {tagline}
             </span>
