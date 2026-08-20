@@ -11,6 +11,9 @@ import {
   Mail,
   Briefcase,
   LayoutDashboard,
+  ShieldCheck,
+  FileText,
+  Sparkles,
 } from 'lucide-react';
 
 interface PageHeaderProps {
@@ -19,16 +22,33 @@ interface PageHeaderProps {
   tagline?: string;
 }
 
-// Map tagline → lucide icon
-const taglineIcons: Record<string, React.ElementType> = {
-  'Expertise':    BrainCircuit,
-  'Our Work':     Briefcase,
-  'Intelligence': FlaskConical,
-  'Contact Us':   Mail,
-  'Our Story':    Users,
-  'Data':         LayoutDashboard,
-  'Services':     Code2,
-};
+function getTaglineIcon(tagline?: string, title?: string): React.ElementType {
+  const text = (tagline || title || '').toLowerCase().trim();
+
+  if (text.includes('portfolio') || text.includes('work') || text.includes('case study')) {
+    return Briefcase;
+  }
+  if (text.includes('service') || text.includes('expertise') || text.includes('software') || text.includes('code')) {
+    return BrainCircuit;
+  }
+  if (text.includes('research') || text.includes('intelligence') || text.includes('insight') || text.includes('lab')) {
+    return FlaskConical;
+  }
+  if (text.includes('contact') || text.includes('touch') || text.includes('mail') || text.includes('inquiry')) {
+    return Mail;
+  }
+  if (text.includes('story') || text.includes('about') || text.includes('team') || text.includes('company')) {
+    return Users;
+  }
+  if (text.includes('data') || text.includes('analytics') || text.includes('pipeline')) {
+    return LayoutDashboard;
+  }
+  if (text.includes('legal') || text.includes('privacy') || text.includes('terms') || text.includes('policy')) {
+    return ShieldCheck;
+  }
+
+  return BrainCircuit;
+}
 
 // Slowly cycling background images
 const bgImages = [
@@ -50,7 +70,8 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
     return () => clearInterval(timer);
   }, []);
 
-  const IconComponent = tagline ? taglineIcons[tagline] : null;
+  const IconComponent = getTaglineIcon(tagline, title);
+  const displayText = tagline || title || 'VETTA';
 
   return (
     <div className="relative bg-brand-black py-20 md:py-28 border-b border-white/10 overflow-hidden">
@@ -88,59 +109,59 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
         }}
       />
 
-      {/* Large 3D rotating icon + name — right side decorative */}
-      {IconComponent && (
+      {/* Large rotating icon + name — right side decorative */}
+      <div
+        className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex flex-col items-center gap-4"
+        style={{ zIndex: 3 }}
+      >
+        {/* Outer subtle glow ring */}
         <div
-          className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex flex-col items-center gap-4"
-          style={{ zIndex: 3 }}
+          className="absolute rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(99,160,255,0.15) 0%, transparent 70%)',
+            width: '340px',
+            height: '340px',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+
+        {/* Spinning Icon - Clean solid white, smooth 360 rotation */}
+        <div
+          style={{
+            animation: 'spin3d 10s linear infinite',
+          }}
         >
-          {/* Outer glow ring */}
-          <div
-            className="absolute rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(99,160,255,0.25) 0%, transparent 70%)',
-              width: '340px',
-              height: '340px',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
+          <IconComponent
+            size={220}
+            strokeWidth={2}
+            className="text-white"
+            style={{ opacity: 0.95 }}
           />
-          {/* Spinning Icon */}
-          <div
-            style={{
-              animation: 'spin3d 10s linear infinite',
-            }}
-          >
-            <IconComponent
-              size={240}
-              strokeWidth={2}
-              className="text-white"
-              style={{ opacity: 0.90 }}
-            />
-          </div>
-          {/* Spinning Name Text */}
-          <div
-            style={{
-              animation: 'spin3d 10s linear infinite',
-              animationDelay: '0s',
-            }}
-          >
-            <span
-              className="text-white font-extrabold tracking-[0.25em] uppercase text-xl"
-              style={{ opacity: 0.90 }}
-            >
-              {tagline}
-            </span>
-          </div>
         </div>
-      )}
+
+        {/* Spinning Name Text */}
+        <div
+          style={{
+            animation: 'spin3d 10s linear infinite',
+            animationDelay: '0s',
+          }}
+        >
+          <span
+            className="text-white font-extrabold tracking-[0.25em] uppercase text-xl"
+            style={{ opacity: 0.95 }}
+          >
+            {displayText}
+          </span>
+        </div>
+      </div>
 
       <Container className="relative" style={{ zIndex: 10 }}>
         <div className="max-w-3xl">
           {tagline && (
             <span className="inline-flex items-center gap-2 text-brand-blue font-bold tracking-[0.15em] text-xs uppercase mb-5 bg-brand-blue/20 px-3 py-1.5 rounded-full border border-brand-blue/30">
-              {IconComponent && <IconComponent size={12} />}
+              <IconComponent size={12} />
               {tagline}
             </span>
           )}

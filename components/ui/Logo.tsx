@@ -22,7 +22,7 @@ export function Logo({ className = '', inverted = false }: { className?: string,
           strokeLinecap="round" 
         />
       </svg>
-      <span className={`text-3xl font-extrabold tracking-widest ml-1 uppercase ${inverted ? 'text-white' : 'text-brand-black'}`}>
+      <span className={`text-3xl font-extrabold tracking-widest ml-1 uppercase ${inverted ? 'text-white' : 'text-white'}`}>
         VETTA
       </span>
     </div>
