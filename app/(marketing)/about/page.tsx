@@ -47,7 +47,8 @@ export default function AboutPage() {
                     '/images/about/about-2.jpg',
                     '/images/about/about-3.jpg',
                     '/images/about/about-4.jpg',
-                    '/images/about/about-5.jpg'
+                    '/images/about/about-5.jpg',
+                    '/images/about/about-6.jpg'
                   ]} 
                 />
               </div>
