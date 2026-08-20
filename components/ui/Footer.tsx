@@ -7,7 +7,18 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="w-full bg-gradient-to-b from-[#111F3C] via-[#14264D] to-[#0E1A34] py-16 md:py-24 border-t border-white/15 relative z-20">
+    <footer className="w-full bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] py-16 md:py-24 border-t border-white/15 relative z-20 overflow-hidden">
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-brand-blue to-transparent" />
+      
+      {/* Subtle background texture */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#ffffff 1px, transparent 0)',
+          backgroundSize: '24px 24px',
+        }}
+      />
       <Container>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-16">
           {/* Brand Col */}
