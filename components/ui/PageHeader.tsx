@@ -160,8 +160,8 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
       <Container className="relative" style={{ zIndex: 10 }}>
         <div className="max-w-3xl">
           {tagline && (
-            <span className="inline-flex items-center gap-2 text-brand-blue font-bold tracking-[0.15em] text-xs uppercase mb-5 bg-brand-blue/20 px-3 py-1.5 rounded-full border border-brand-blue/30">
-              <IconComponent size={12} />
+            <span className="inline-flex items-center gap-2 text-white font-bold tracking-[0.15em] text-xs uppercase mb-5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20 shadow-sm backdrop-blur-sm">
+              <IconComponent size={13} className="text-white" />
               {tagline}
             </span>
           )}
