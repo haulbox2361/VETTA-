@@ -42,7 +42,7 @@ export function AnimatedBackground() {
 
       {/* Subtle Dark-Blue Dots (Sparse, Elegant, Drifting) */}
       <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
+        {[...Array(75)].map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full animate-float opacity-0"
