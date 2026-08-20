@@ -88,36 +88,54 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
         }}
       />
 
-      {/* Large 3D rotating icon — right side decorative */}
+      {/* Large 3D rotating icon + name — right side decorative */}
       {IconComponent && (
         <div
-          className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex"
+          className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex flex-col items-center gap-4"
           style={{ zIndex: 3 }}
         >
           {/* Outer glow ring */}
           <div
-            className="absolute inset-0 rounded-full"
+            className="absolute rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)',
-              width: '220px',
-              height: '220px',
+              background: 'radial-gradient(circle, rgba(99,160,255,0.25) 0%, transparent 70%)',
+              width: '340px',
+              height: '340px',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
             }}
           />
+          {/* Spinning Icon */}
           <div
             style={{
-              animation: 'spin3d 8s linear infinite',
-              filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.5))',
-              perspective: '400px',
+              animation: 'spin3d 6s linear infinite',
+              filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.7)) drop-shadow(0 0 6px rgba(99,160,255,0.9))',
             }}
           >
             <IconComponent
-              size={120}
-              strokeWidth={1}
-              className="text-white opacity-20"
+              size={240}
+              strokeWidth={1.2}
+              className="text-white"
+              style={{ opacity: 0.75 }}
             />
+          </div>
+          {/* Spinning Name Text */}
+          <div
+            style={{
+              animation: 'spin3d 6s linear infinite',
+              animationDelay: '0.1s',
+            }}
+          >
+            <span
+              className="text-white font-extrabold tracking-[0.2em] uppercase text-lg"
+              style={{
+                opacity: 0.80,
+                textShadow: '0 0 20px rgba(255,255,255,0.8), 0 0 6px rgba(99,160,255,1)',
+              }}
+            >
+              {tagline}
+            </span>
           </div>
         </div>
       )}
