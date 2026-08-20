@@ -109,51 +109,33 @@ export function PageHeader({ title, description, tagline }: PageHeaderProps) {
         }}
       />
 
-      {/* Large rotating icon + name — right side decorative */}
+      {/* Wallpaper watermark logo embedded in the background */}
       <div
-        className="absolute right-4 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex flex-col items-center gap-4"
-        style={{ zIndex: 3 }}
+        className="absolute right-4 md:right-12 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none hidden md:flex items-center justify-center"
+        style={{ zIndex: 2 }}
       >
-        {/* Outer subtle glow ring */}
+        {/* Soft ambient radial glow */}
         <div
           className="absolute rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(99,160,255,0.15) 0%, transparent 70%)',
-            width: '340px',
-            height: '340px',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            background: 'radial-gradient(circle, rgba(99,160,255,0.20) 0%, rgba(30,58,138,0.10) 50%, transparent 70%)',
+            width: '420px',
+            height: '420px',
           }}
         />
 
-        {/* Spinning Icon - Clean solid white, smooth 360 rotation */}
+        {/* Wallpaper watermark emblem - smooth slow rotation, blended inside the blue */}
         <div
           style={{
-            animation: 'spin3d 10s linear infinite',
+            animation: 'spin3d 35s linear infinite',
           }}
         >
           <IconComponent
-            size={220}
-            strokeWidth={2}
+            size={300}
+            strokeWidth={1.5}
             className="text-white"
-            style={{ opacity: 0.95 }}
+            style={{ opacity: 0.16 }}
           />
-        </div>
-
-        {/* Spinning Name Text */}
-        <div
-          style={{
-            animation: 'spin3d 10s linear infinite',
-            animationDelay: '0s',
-          }}
-        >
-          <span
-            className="text-white font-extrabold tracking-[0.25em] uppercase text-xl"
-            style={{ opacity: 0.95 }}
-          >
-            {displayText}
-          </span>
         </div>
       </div>
 
