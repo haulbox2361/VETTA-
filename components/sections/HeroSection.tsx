@@ -3,34 +3,47 @@ import Link from 'next/link';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { BrainCircuit, Database, Code, Globe, ShieldCheck, Cpu } from 'lucide-react';
+import { ImageCarousel } from '@/components/ui/ImageCarousel';
 
-const techIcons = [
-  { icon: BrainCircuit, label: 'AI & Automation', color: 'bg-blue-50 text-brand-blue' },
-  { icon: Database, label: 'Data Intelligence', color: 'bg-indigo-50 text-indigo-600' },
-  { icon: Code, label: 'Software Dev', color: 'bg-sky-50 text-sky-600' },
-  { icon: Globe, label: 'Web Development', color: 'bg-blue-50 text-brand-blue' },
-  { icon: Cpu, label: 'Tech Consulting', color: 'bg-indigo-50 text-indigo-600' },
-  { icon: ShieldCheck, label: 'Security First', color: 'bg-sky-50 text-sky-600' },
+const heroImages = [
+  '/images/about/about-1.jpg',
+  '/images/about/about-2.jpg',
+  '/images/about/about-3.jpg',
+  '/images/about/about-4.jpg',
+  '/images/about/about-5.jpg',
+  '/images/about/about-6.jpg',
+  '/images/about/about-7.jpg',
 ];
 
 export default function HeroSection() {
   return (
-    <Section className="bg-neutral-50 pb-20 pt-24 md:pt-32 lg:pt-40 overflow-hidden">
-      <Container className="flex flex-col lg:flex-row items-center gap-16">
+    <Section className="bg-neutral-50 pb-20 pt-24 md:pt-32 lg:pt-36 overflow-hidden">
+      <Container className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-        {/* Left: Text */}
-        <div className="flex-1 flex flex-col items-start text-left">
-          <span className="inline-block mb-5 text-xs font-bold tracking-[0.18em] uppercase text-brand-blue bg-brand-blue/8 px-4 py-2 rounded-full border border-brand-blue/15 opacity-0 animate-slide-up" style={{ animationDelay: '0ms' }}>
+        {/* Left: Text Content */}
+        <div className="flex-1 flex flex-col items-start text-left order-2 lg:order-1">
+          <span
+            className="inline-block mb-5 text-xs font-bold tracking-[0.18em] uppercase text-brand-blue bg-brand-blue/8 px-4 py-2 rounded-full border border-brand-blue/15 opacity-0 animate-slide-up"
+            style={{ animationDelay: '0ms' }}
+          >
             Premium Technology Consultancy
           </span>
-          <h1 className="text-display max-w-3xl text-brand-black mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '100ms' }}>
+          <h1
+            className="text-display max-w-3xl text-brand-black mb-6 opacity-0 animate-slide-up"
+            style={{ animationDelay: '100ms' }}
+          >
             Intelligent Engineering for Forward-Thinking Companies
           </h1>
-          <p className="text-lg max-w-xl text-neutral-700 mb-10 opacity-0 animate-slide-up" style={{ animationDelay: '250ms' }}>
+          <p
+            className="text-lg max-w-xl text-neutral-700 mb-10 opacity-0 animate-slide-up"
+            style={{ animationDelay: '250ms' }}
+          >
             We build intelligent systems — from AI automation to robust software — that solve complex business problems. The result: faster decisions, operational efficiency, and a competitive edge.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto opacity-0 animate-slide-up" style={{ animationDelay: '400ms' }}>
+          <div
+            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto opacity-0 animate-slide-up"
+            style={{ animationDelay: '400ms' }}
+          >
             <Link href="/contact">
               <Button className="w-full sm:w-auto hover:-translate-y-0.5 transition-transform">Start a Project</Button>
             </Link>
@@ -39,12 +52,15 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-12 flex flex-wrap gap-6 opacity-0 animate-slide-up" style={{ animationDelay: '550ms' }}>
+          {/* Trust stat badges */}
+          <div
+            className="mt-12 flex flex-wrap gap-8 opacity-0 animate-slide-up"
+            style={{ animationDelay: '550ms' }}
+          >
             {[
               { label: '40%', sub: 'Avg. Cost Reduction' },
               { label: '75%', sub: 'Efficiency Gain' },
-              { label: '24h', sub: 'Response Time' },
+              { label: '24h', sub: 'Response Guarantee' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-2xl font-extrabold text-brand-black tracking-tight">{stat.label}</span>
@@ -54,25 +70,33 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: Visual grid of capabilities */}
-        <div className="flex-shrink-0 w-full max-w-sm lg:max-w-[380px] opacity-0 animate-slide-up" style={{ animationDelay: '300ms' }}>
+        {/* Right: Image Showcase */}
+        <div
+          className="flex-shrink-0 w-full max-w-[420px] lg:max-w-[460px] order-1 lg:order-2 opacity-0 animate-slide-up"
+          style={{ animationDelay: '200ms' }}
+        >
           <div className="relative">
-            {/* Decorative glow */}
-            <div className="absolute inset-0 bg-brand-blue/5 rounded-3xl blur-3xl scale-110" />
-            <div className="relative grid grid-cols-2 gap-4">
-              {techIcons.map(({ icon: Icon, label, color }, i) => (
-                <div
-                  key={label}
-                  className={`flex flex-col items-start gap-3 p-5 rounded-2xl border border-neutral-200 bg-white shadow-sm hover:-translate-y-1 transition-transform duration-300`}
-                  style={{ transitionDelay: `${i * 60}ms` }}
-                >
-                  <div className={`p-2.5 rounded-xl ${color}`}>
-                    <Icon size={22} />
-                  </div>
-                  <span className="text-sm font-semibold text-brand-black leading-tight">{label}</span>
-                </div>
-              ))}
+            {/* Ambient glow behind the frame */}
+            <div className="absolute -inset-4 bg-brand-blue/10 rounded-3xl blur-2xl" />
+
+            {/* Main image frame */}
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-[0_24px_80px_rgba(30,58,138,0.12)] aspect-[4/5]">
+              <ImageCarousel images={heroImages} interval={3500} />
+
+              {/* Overlay gradient at bottom for depth */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-20" />
+
+              {/* Floating badge on the image */}
+              <div className="absolute bottom-5 left-5 z-30 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
+                <div className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-0.5">Intelligent Systems</div>
+                <div className="text-sm font-semibold text-brand-black">AI · Data · Software</div>
+              </div>
             </div>
+
+            {/* Corner accent — top right */}
+            <div className="absolute -top-3 -right-3 w-16 h-16 border-t-2 border-r-2 border-brand-blue/30 rounded-tr-2xl pointer-events-none" />
+            {/* Corner accent — bottom left */}
+            <div className="absolute -bottom-3 -left-3 w-16 h-16 border-b-2 border-l-2 border-brand-blue/30 rounded-bl-2xl pointer-events-none" />
           </div>
         </div>
 
