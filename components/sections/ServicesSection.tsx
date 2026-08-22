@@ -17,7 +17,7 @@ const services = [
     title: 'Data Analysis & Intelligence',
     description: 'Unlocking actionable insights from complex data to drive strategic decision-making.',
     icon: <Database size={32} className="text-brand-blue" />,
-    href: '/services/data-intelligence'
+    href: '/services/data-analytics'
   },
   {
     title: 'Software Development',
@@ -59,7 +59,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Reveal key={index} delay={index * 100}>
-              <Card className="flex flex-col h-full border-transparent hover:border-brand-blue/20 group">
+              <Card className="flex flex-col h-full border-neutral-200 hover:border-brand-blue/30 hover:shadow-md group">
                 <div className="mb-6 p-3 bg-brand-blue/10 rounded-lg inline-block w-fit group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>

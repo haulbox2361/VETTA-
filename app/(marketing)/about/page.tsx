@@ -1,9 +1,11 @@
 import React from 'react';
+import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Button } from '@/components/ui/Button';
 import { ImageCarousel } from '@/components/ui/ImageCarousel';
 import Link from 'next/link';
+import { ShieldCheck, Lock, Layers, FileCheck } from 'lucide-react';
 
 export const metadata = {
   title: 'About | VETTA Intelligence',
@@ -19,7 +21,7 @@ export default function AboutPage() {
         tagline="Our Story"
       />
 
-      <section className="py-16 md:py-24">
+      <Section>
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 bg-white relative z-20 p-8 md:p-10 rounded-2xl border border-neutral-200 shadow-sm">
@@ -60,9 +62,9 @@ export default function AboutPage() {
             </div>
           </div>
         </Container>
-      </section>
+      </Section>
 
-      <section className="py-16 md:py-24">
+      <Section>
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">Our Philosophy</h2>
@@ -95,7 +97,64 @@ export default function AboutPage() {
             </div>
           </div>
         </Container>
-      </section>
+      </Section>
+
+      {/* Enterprise Standards & Security */}
+      <Section className="bg-neutral-50 border-t border-neutral-200">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-bold text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full mb-3">
+              Enterprise Rigor
+            </span>
+            <h2 className="text-3xl font-bold text-neutral-900 mb-6">Security & Engineering Standards</h2>
+            <p className="text-lg text-neutral-600">
+              We engineer mission-critical systems with enterprise-grade governance, strict isolation, and bulletproof security by default.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs flex flex-col">
+              <div className="w-10 h-10 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+                <ShieldCheck size={22} />
+              </div>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">Zero-Trust Architecture</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                Strict least-privilege access, encrypted transport layers, and rigorous secret management across all services.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs flex flex-col">
+              <div className="w-10 h-10 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+                <Lock size={22} />
+              </div>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">Client IP & Data Isolation</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                Your proprietary data, weights, and algorithms remain 100% yours. Zero cross-tenant data sharing.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs flex flex-col">
+              <div className="w-10 h-10 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+                <Layers size={22} />
+              </div>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">High-Availability Resilience</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                Multi-region failover, automated telemetry health checks, and continuous disaster-recovery validation.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-xs flex flex-col">
+              <div className="w-10 h-10 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+                <FileCheck size={22} />
+              </div>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">Compliance Alignment</h3>
+              <p className="text-sm text-neutral-600 leading-relaxed">
+                Built-in audit trails, GDPR/CCPA readiness, and architectural patterns aligned with SOC2 Type II controls.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
 
       {/* CTA Section */}
       <section className="py-24 bg-white relative z-20">

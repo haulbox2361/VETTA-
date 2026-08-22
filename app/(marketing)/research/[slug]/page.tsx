@@ -66,23 +66,42 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
       {/* Article Content */}
       <section className="py-16 md:py-24">
         <Container>
-          <Reveal delay={200} className="max-w-prose mx-auto prose prose-lg prose-neutral">
-            <div className="mb-12 flex items-center gap-4 pb-8 border-b border-neutral-200">
-              <div className="w-12 h-12 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500 font-bold">
-                V
-              </div>
-              <div>
-                <p className="text-sm font-bold text-neutral-900 m-0">{article.author}</p>
-                <p className="text-xs text-neutral-500 m-0">VETTA Intelligence</p>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            {/* Executive Summary / Key Takeaways Callout */}
+            {article.keyTakeaways && article.keyTakeaways.length > 0 && (
+              <Reveal className="mb-12 p-8 bg-neutral-50 border border-neutral-200 rounded-2xl border-l-4 border-l-brand-blue shadow-xs">
+                <h2 className="text-xs uppercase tracking-[0.2em] font-bold text-brand-blue mb-4">
+                  Executive Brief • Key Takeaways
+                </h2>
+                <ul className="space-y-3">
+                  {article.keyTakeaways.map((takeaway, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-neutral-800 text-base font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-2 shrink-0" />
+                      <span>{takeaway}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            )}
 
-            <div className="space-y-6 text-neutral-700 leading-relaxed text-lg">
-              {article.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
-          </Reveal>
+            <Reveal delay={150} className="max-w-prose mx-auto prose prose-lg prose-neutral">
+              <div className="mb-12 flex items-center gap-4 pb-8 border-b border-neutral-200">
+                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold">
+                  V
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-neutral-900 m-0">{article.author}</p>
+                  <p className="text-xs text-neutral-500 m-0">VETTA Intelligence</p>
+                </div>
+              </div>
+
+              <div className="space-y-6 text-neutral-700 leading-relaxed text-lg">
+                {article.content.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
     </main>

@@ -22,11 +22,20 @@ export function AnimatedBackground() {
     if (!ctx) return;
 
     let particlesArray: Particle[] = [];
-    const numberOfParticles = 315;
+    
+    const getParticleCount = (width: number) => {
+      if (width < 768) return 60;
+      if (width < 1024) return 120;
+      return 200;
+    };
+
+    let animationFrameId: number;
+    let isVisible = true;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      init();
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -120,14 +129,15 @@ export function AnimatedBackground() {
 
     const init = () => {
       particlesArray = [];
-      for (let i = 0; i < numberOfParticles; i++) {
+      const count = getParticleCount(canvas.width);
+      for (let i = 0; i < count; i++) {
         particlesArray.push(new Particle());
       }
     };
     init();
 
-    let animationFrameId: number;
     const animate = () => {
+      if (!isVisible) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
@@ -136,10 +146,22 @@ export function AnimatedBackground() {
     };
     animate();
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        isVisible = false;
+        cancelAnimationFrame(animationFrameId);
+      } else {
+        isVisible = true;
+        animate();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseout', handleMouseOut);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, [mounted]);
@@ -159,19 +181,19 @@ export function AnimatedBackground() {
         }}
       />
 
-      {/* Soft Blue Ambient Glows */}
+      {/* Soft Blue Ambient Glows with GPU compositor hints */}
       <div 
-        className="absolute top-[-5%] left-[-5%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] rounded-full blur-[100px] animate-blob" 
+        className="absolute top-[-5%] left-[-5%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] rounded-full blur-[100px] animate-blob will-change-transform" 
         style={{ backgroundColor: 'var(--color-brand-blue)', opacity: 0.03, animationDuration: '20s' }} 
       />
       <div 
-        className="absolute top-[30%] right-[-10%] w-[60vw] h-[60vw] max-w-[900px] max-h-[900px] rounded-full blur-[120px] animate-blob" 
+        className="absolute top-[30%] right-[-10%] w-[60vw] h-[60vw] max-w-[900px] max-h-[900px] rounded-full blur-[120px] animate-blob will-change-transform" 
         style={{ backgroundColor: 'var(--color-info)', opacity: 0.03, animationDelay: '5s', animationDuration: '25s' }} 
       />
       
       {/* Subtle Indigo Accent Glow */}
       <div 
-        className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] rounded-full blur-[100px] animate-blob" 
+        className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] rounded-full blur-[100px] animate-blob will-change-transform" 
         style={{ backgroundColor: '#4F46E5', opacity: 0.02, animationDelay: '2s', animationDuration: '22s' }} 
       />
 

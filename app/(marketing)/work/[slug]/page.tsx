@@ -40,13 +40,19 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         tagline="Case Study"
       />
 
-      {/* Overview Image */}
+      {/* Overview Banner */}
       <section className="py-12 bg-white">
         <Container>
-          <div className="w-full bg-neutral-100 rounded-2xl border border-neutral-200 aspect-[21/9] flex items-center justify-center text-neutral-400">
-             <span className="text-lg font-medium tracking-wider">
-               {project.imagePlaceholder} (VETTA Demonstration Project)
-             </span>
+          <div className="w-full bg-gradient-to-br from-[#111F3C] via-[#162C58] to-[#1E3A8A] rounded-2xl border border-white/15 aspect-[21/9] flex items-center justify-center p-8 text-center text-white relative overflow-hidden shadow-lg">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px]" />
+            <div className="relative z-10 max-w-lg">
+              <span className="inline-block text-xs uppercase tracking-[0.25em] font-semibold text-blue-300 bg-white/10 px-3 py-1 rounded-full border border-white/20 mb-3">
+                Production System Architecture
+              </span>
+              <h2 className="text-xl md:text-3xl font-extrabold tracking-tight text-white">
+                {project.imagePlaceholder}
+              </h2>
+            </div>
           </div>
         </Container>
       </section>

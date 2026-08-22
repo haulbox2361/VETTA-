@@ -21,7 +21,7 @@ export default function HeroSection() {
       <Container className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
         {/* Left: Text Content */}
-        <div className="flex-1 flex flex-col items-start text-left order-2 lg:order-1">
+        <div className="flex-1 flex flex-col items-start text-left order-1 lg:order-1">
           <span
             className="inline-block mb-5 text-xs font-bold tracking-[0.18em] uppercase text-brand-blue bg-brand-blue/8 px-4 py-2 rounded-full border border-brand-blue/15 opacity-0 animate-slide-up"
             style={{ animationDelay: '0ms' }}
@@ -58,9 +58,9 @@ export default function HeroSection() {
             style={{ animationDelay: '550ms' }}
           >
             {[
-              { label: '40%', sub: 'Avg. Cost Reduction' },
-              { label: '75%', sub: 'Efficiency Gain' },
               { label: '24h', sub: 'Response Guarantee' },
+              { label: '100%', sub: 'Senior Engineers' },
+              { label: 'Zero', sub: 'Technical Debt' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-2xl font-extrabold text-brand-black tracking-tight">{stat.label}</span>
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
         {/* Right: Image Showcase */}
         <div
-          className="flex-shrink-0 w-full max-w-[420px] lg:max-w-[460px] order-1 lg:order-2 opacity-0 animate-slide-up"
+          className="flex-shrink-0 w-full max-w-[420px] lg:max-w-[460px] order-2 lg:order-2 opacity-0 animate-slide-up"
           style={{ animationDelay: '200ms' }}
         >
           <div className="relative">

@@ -81,10 +81,10 @@ export function Footer() {
         </div>
         
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-white/20 pt-8 gap-4">
-          <p className="text-sm text-white/70">
+          <p className="text-sm text-white/80">
             &copy; {currentYear} VETTA Intelligence. All rights reserved.
           </p>
-          <p className="text-xs text-white/50">
+          <p className="text-xs text-white/70">
             Built with precision. Engineered for impact.
           </p>
         </div>

@@ -28,13 +28,14 @@ export default function WorkPage() {
                 href={`/work/${project.slug}`}
                 className="group flex flex-col h-full overflow-hidden rounded-2xl border border-neutral-200 bg-white relative z-20 shadow-sm transition-all hover:border-brand-blue/30 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
               >
-                <div className="bg-neutral-100 aspect-video flex items-center justify-center p-8 text-center text-neutral-400 border-b border-neutral-200">
-                  {/* Placeholder for real images */}
-                  <span className="text-sm font-medium uppercase tracking-wider">
-                    {project.imagePlaceholder}
-                    <br/>
-                    (VETTA Demonstration Project)
-                  </span>
+                <div className="bg-gradient-to-br from-neutral-900 via-[#111F3C] to-[#1E3A8A] aspect-video flex items-center justify-center p-8 text-center text-white border-b border-neutral-200 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-500">
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:16px_16px]" />
+                  <div className="relative z-10 max-w-xs">
+                    <div className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-blue-hover text-blue-200 mb-2">Architecture Blueprint</div>
+                    <div className="text-base md:text-lg font-bold text-white tracking-tight">
+                      {project.imagePlaceholder}
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="p-8 flex flex-col flex-1 bg-white">

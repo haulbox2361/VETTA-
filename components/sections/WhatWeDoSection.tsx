@@ -7,7 +7,7 @@ const stats = [
   { value: '40%', label: 'Average Cost Reduction' },
   { value: '75%', label: 'Efficiency Gain Achieved' },
   { value: '5+', label: 'Core Technology Disciplines' },
-  { value: '24h', label: 'Response Guarantee' },
+  { value: '99.8%', label: 'Production Reliability' },
 ];
 
 export default function WhatWeDoSection() {
