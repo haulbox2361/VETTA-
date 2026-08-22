@@ -22,23 +22,14 @@ export function AnimatedBackground() {
     if (!ctx) return;
 
     let particlesArray: Particle[] = [];
+    let animationFrameId: number;
+    let isVisible = true;
     
     const getParticleCount = (width: number) => {
       if (width < 768) return 60;
       if (width < 1024) return 120;
       return 200;
     };
-
-    let animationFrameId: number;
-    let isVisible = true;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      init();
-    };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
 
     let mouse = {
       x: null as number | null,
@@ -54,9 +45,6 @@ export function AnimatedBackground() {
       mouse.x = null;
       mouse.y = null;
     };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseout', handleMouseOut);
 
     class Particle {
       x: number;
@@ -134,7 +122,19 @@ export function AnimatedBackground() {
         particlesArray.push(new Particle());
       }
     };
-    init();
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    };
+
+    // Initialize dimensions and particles
+    resizeCanvas();
+
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseout', handleMouseOut);
 
     const animate = () => {
       if (!isVisible) return;
